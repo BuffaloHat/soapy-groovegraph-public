@@ -149,11 +149,15 @@ All service endpoints are read from `.env` at startup — never hardcoded. Key v
 
 ## Screenshots
 
-**Feature Inspector** — inspect raw Essentia audio features for any track
+### Feature Inspector — inspect raw Essentia audio features for any track
 ![Feature Inspector](docs/screenshots/1_feature_inspector_shot.png)
 
-**Ask Your Library** — natural language RAG with LLM-generated answer and album art
+<br>
+
+### Ask Your Library — natural language RAG with LLM-generated answer and album art
 ![Ask Your Library](docs/screenshots/2_ask_your_library_shot.png)
 
-**Audio Similarity Search** — find tracks that sound like a seed track by audio fingerprint
+<br>
+
+### Audio Similarity Search — find tracks that sound like a seed track by audio fingerprint
 ![Audio Similarity](docs/screenshots/3_audio_similarity_shot.png)
