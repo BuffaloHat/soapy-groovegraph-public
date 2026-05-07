@@ -1,0 +1,37 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: sgg_postgres
+    environment:
+      POSTGRES_DB: ${PG_DB:-sgg}
+      POSTGRES_USER: ${PG_USER:-sgg}
+      POSTGRES_PASSWORD: ${PG_PASSWORD:-sgg}
+    ports:
+      - "${PG_PORT_ALT:-5433}:5432"   # SGG Postgres on host 5433
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${PG_USER:-sgg} -d ${PG_DB:-sgg}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  qdrant:
+    image: qdrant/qdrant:latest
+    container_name: sgg_qdrant
+    environment:
+      - QDRANT__SERVICE__ENABLE_CORS=true
+    ports:
+      - "6335:6333"   # SGG Qdrant REST on 6335
+      - "6336:6334"   # SGG Qdrant gRPC on 6336
+    volumes:
+      - qdrant_storage:/qdrant/storage
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:6333/healthz"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  pgdata:
+  qdrant_storage:

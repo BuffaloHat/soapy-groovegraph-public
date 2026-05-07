@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: im_essentia_features_unique
+    description: Deduplicated Essentia features (one row per file_hash)
+    columns:
+      - name: file_hash
+        description: MD5 of encoded audio stream; stable track identifier
+        tests:
+          - not_null
+          - unique

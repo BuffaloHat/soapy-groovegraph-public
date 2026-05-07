@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: stg_essentia_features
+    description: Staging view over Essentia feature dataset with typed columns and vectors retained as arrays.
+    columns:
+      - name: file_hash
+        description: MD5 of encoded audio stream; stable track identifier
+        tests:
+          - not_null
+      - name: bpm
+        description: Estimated tempo (BPM)
+      - name: danceability
+        description: Rhythmic regularity/groove (0–1)
+      - name: key_key
+        description: Musical key (A..G with sharps)
+      - name: key_scale
+        description: Scale (major/minor)
+      - name: key_strength
+        description: Confidence for detected key (0–1)
+      - name: loudness_integrated
+        description: Integrated loudness (LUFS)
+      - name: loudness_range
+        description: Loudness range (LU)
+      - name: spectral_centroid
+        description: Spectral centroid (Hz)
+      - name: mfcc_mean
+        description: 13-dim MFCC means (array)
+      - name: thpcp
+        description: 36-dim tonal pitch class profile (array)

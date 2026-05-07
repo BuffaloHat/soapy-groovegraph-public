@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: fct_audio_vector_v1
+    description: |
+      Audio feature vectors (v1) derived from Essentia. One row per unique audio content (file_hash),
+      with both raw and z-scored 12-dimension vectors for similarity search experiments.
+    columns:
+      - name: file_hash
+        description: MD5 of the encoded audio stream (Essentia metadata.audio_properties.md5_encoded)
+        tests:
+          - not_null
+          - unique
+      - name: vector_raw
+        description: |
+          12-d vector in order [danceability, bpm, loudness_integrated, loudness_range, spectral_rms,
+          spectral_centroid, spectral_flux, pitch_salience, hfc, zcr, onset_rate, key_strength]
+      - name: vector_z
+        description: Above vector standardized via dataset-wide mean/stddev (for analysis/testing)
+      - name: vector_profile
+        description: Version label for vector definition (sgg_audio_v1)
+      - name: vector_dim
+        description: Vector dimensionality (12)
+

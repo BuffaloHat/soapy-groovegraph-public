@@ -1,0 +1,9 @@
+requests
+pandas
+pyarrow
+duckdb
+psycopg2-binary
+qdrant-client
+python-dotenv
+jupyterlab
+streamlit
