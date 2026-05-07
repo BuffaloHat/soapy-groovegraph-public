@@ -4,18 +4,7 @@ AI-powered music discovery over a personal iTunes library. Ask natural language 
 
 > SGG knows *your* library. Every obscure album you imported from a CD in 2003. Every artist no one else is familiar with. SGG lets you ask questions about your own music collection and surfaces tracks that were forgotten or buried.
 
----
-
-## Screenshots
-
-**Feature Inspector** — inspect raw Essentia audio features for any track
-![Feature Inspector](docs/screenshots/1_feature_inspector_shot.png)
-
-**Ask Your Library** — natural language RAG with LLM-generated answer and album art
-![Ask Your Library](docs/screenshots/2_ask_your_library_shot.png)
-
-**Audio Similarity Search** — find tracks that sound like a seed track by audio fingerprint
-![Audio Similarity](docs/screenshots/3_audio_similarity_shot.png)
+→ [Screenshots](#screenshots)
 
 ---
 
@@ -155,3 +144,16 @@ All service endpoints are read from `.env` at startup — never hardcoded. Key v
 - Two Qdrant collections: `sgg_audio_v1` (12-dim numeric) and `sgg_text_v1` (768-dim text)
 - Parquet-first storage → DuckDB (dbt dev)
 - Archived scripts and dbt models live in `z_archive/` folders — preserved but not in the active pipeline
+
+---
+
+## Screenshots
+
+**Feature Inspector** — inspect raw Essentia audio features for any track
+![Feature Inspector](docs/screenshots/1_feature_inspector_shot.png)
+
+**Ask Your Library** — natural language RAG with LLM-generated answer and album art
+![Ask Your Library](docs/screenshots/2_ask_your_library_shot.png)
+
+**Audio Similarity Search** — find tracks that sound like a seed track by audio fingerprint
+![Audio Similarity](docs/screenshots/3_audio_similarity_shot.png)
