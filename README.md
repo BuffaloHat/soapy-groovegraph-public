@@ -133,9 +133,11 @@ All service endpoints are read from `.env` at startup — never hardcoded. Key v
 
 | File | Purpose |
 |---|---|
+| `docs/sgg_technical_reference.pdf` | Full technical reference — architecture, component deep dives, data reference, operations |
 | `docs/overview.md` | Project background, stack, data flow, folder structure |
 | `docs/infra.md` | Ports, services, config reference, health checks |
-| `docs/sgg_technical_reference.pdf` | Full technical reference — architecture, component deep dives, data reference, operations |
+| `docs/data_inventory.md` | Field schemas, row counts, Qdrant collection specs, known gaps |
+| `docs/essentia_extract_run.md` | Extraction and flattening runbook — how to run the Essentia pipeline |
 
 ---
 
