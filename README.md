@@ -4,7 +4,8 @@ AI-powered music discovery over a personal iTunes library. Ask natural language 
 
 > SGG knows *your* library. Every obscure album you imported from a CD in 2003. Every artist no one else is familiar with. SGG lets you ask questions about your own music collection and surfaces tracks that were forgotten or buried.
 
-→ [Screenshots](#screenshots)
+### → [Soapy GrooveGraph User Interface — Screenshots](#screenshots)
+*See the Streamlit UI built on top of the pipeline.*
 
 ---
 
